@@ -4,10 +4,12 @@ import Img from "../images/contactImg.png"
 function Contact() {
     return (
         <div className="contact-page row">
-            <div className="contactForm-container col-lg-7">
-                <h1 className="form-header mb-3">Let's work together!</h1>
-                <p className="lead">Let's collaborate to transform your concepts into reality!</p>
-                <Form />
+            <div className="col-lg-7 pe-lg-5 px-2 px-lg-0">
+                <div className="contactForm-container">
+                    <h1 className="form-header mb-3">Let's work together!</h1>
+                    <p className="lead">Let's collaborate to transform your concepts into reality!</p>
+                    <Form />
+                </div>
             </div>
             <div className="contactImg-container col-lg-5">
                 <img className="contactImg" src={Img} alt="contact" />

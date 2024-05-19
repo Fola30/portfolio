@@ -20,7 +20,7 @@ function Form() {
                 <textarea className="form-input" name="message" id="messageId">
                 </textarea>
             </div>
-            <button className="resume-btn btn btn-lg mt-5 w-25">Submit</button>
+            <button className="resume-btn btn btn-lg mt-5">Submit</button>
         </form>
     )
 }

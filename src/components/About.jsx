@@ -3,9 +3,9 @@ import pic from "../images/me.jpeg"
 function About() {
     return (
         <div className="about-page">
-            <img src={pic} className="about-img mb-5" height="300" width="300" alt="" />
+            <img src={pic} className="about-img mb-5" height="300" width="300" alt="Me"/> 
             <h2 className="page-header">About Me</h2>
-            <p className="lead w-75 mx-auto">
+            <p className="lead mx-auto" data-aos="fade-up">
                 My journey in the world of programming began in 2020 at New Horizons Nigeria. Whether it's crafting visually appealing interfaces, optimizing website performance, or troubleshooting complex issues, I am dedicated to delivering high-quality results.
             </p>
             <button type="button" className="resume-btn btn btn-lg">

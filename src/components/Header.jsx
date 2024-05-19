@@ -1,10 +1,10 @@
 import Time from "./Timer";
 import { Link } from 'react-scroll';
 
-function Nav() {
+function Nav(props) {
   return (
-    <div class="header-div">
-      <header id="header" class="d-flex justify-content-between align-items-center py-4">
+    <div class="header-div pt-4 pb-2">
+      <header id={props.name} class="d-flex justify-content-between align-items-center">
         <Time />
         <ul class="nav">
             <li class="nav-item mx-lg-4">

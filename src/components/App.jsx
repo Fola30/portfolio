@@ -1,15 +1,15 @@
 import {useEffect} from "react";
 import Nav from "./Header";
-import './App.css';
 import Hero from './Hero';
 import SkillPage from "./SkillPage";
 import About from "./About";
 import Contact from "./Contact";
+import Aos from "aos";
 
 function App() {
   useEffect(() => {
+    Aos.init();
     let sections = document.querySelectorAll('section');
-    let slack = 0;
     let nav = document.querySelector('#header');
 
     window.onload = () => {
@@ -19,39 +19,13 @@ function App() {
     }
 
     window.onscroll = () => {
-      sections.forEach((sec, i) => {
-          let scrollDistance = window.scrollY;
-          let secDistance = sec.offsetTop;
-
-          switch (i) {
-            case 1:
-              slack = 300;
-              break;
-
-            case 3:
-              slack = 550;
-              break;
-          
-            default:
-              break;
-          }
-          
-          if(scrollDistance >= secDistance - slack) {
-              sec.classList.add('show-animate');
-          }
-          else {
-              sec.classList.remove('show-animate');
-          }
-
-          if (scrollDistance >= secDistance && i === 1) {
-            nav.classList.add('fixed-top', 'container', 'pt-1', 'nav-scroll');
-            nav.classList.remove('py-4');
-          }
-          else if (scrollDistance < secDistance && i === 1) {
-            nav.classList.remove('fixed-top', 'container', 'pt-1', 'nav-scroll');
-            nav.classList.add('py-4');
-          }
-      })
+      let scrollDistance = window.scrollY;
+      if (scrollDistance > 37) {
+        nav.classList.add('fixed-top', 'container', 'nav-scroll');
+      }
+      else if (scrollDistance === 0) {
+        nav.classList.remove('fixed-top', 'container', 'nav-scroll');
+      }
     }
   }, []);
 
@@ -59,7 +33,7 @@ function App() {
       <div>
         <section id="home">
           <div className="container page">
-              <Nav />
+              <Nav name="header" />
               <Hero />
               <hr/>
           </div>

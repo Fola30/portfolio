@@ -20,8 +20,8 @@
 }
 
 body {
-    /* background-color: #0C0C0C; */
-    background-image: repeating-linear-gradient(90deg, hsla(57,0%,42%,0.09) 0px, hsla(57,0%,42%,0.09) 1px,transparent 1px, transparent 60px),repeating-linear-gradient(0deg, hsla(57,0%,42%,0.09) 0px, hsla(57,0%,42%,0.09) 1px,transparent 1px, transparent 60px),repeating-linear-gradient(0deg, hsla(57,0%,42%,0.09) 0px, hsla(57,0%,42%,0.09) 1px,transparent 1px, transparent 10px),repeating-linear-gradient(90deg, hsla(57,0%,42%,0.09) 0px, hsla(57,0%,42%,0.09) 1px,transparent 1px, transparent 10px),linear-gradient(90deg, rgb(20,20,20),rgb(20,20,20));
+    background-color: #0C0C0C;
+    /* background-image: repeating-linear-gradient(90deg, hsla(57,0%,42%,0.09) 0px, hsla(57,0%,42%,0.09) 1px,transparent 1px, transparent 60px),repeating-linear-gradient(0deg, hsla(57,0%,42%,0.09) 0px, hsla(57,0%,42%,0.09) 1px,transparent 1px, transparent 60px),repeating-linear-gradient(0deg, hsla(57,0%,42%,0.09) 0px, hsla(57,0%,42%,0.09) 1px,transparent 1px, transparent 10px),repeating-linear-gradient(90deg, hsla(57,0%,42%,0.09) 0px, hsla(57,0%,42%,0.09) 1px,transparent 1px, transparent 10px),linear-gradient(90deg, rgb(20,20,20),rgb(20,20,20)); */
     color: rgb(201, 201, 201);
     overflow-x: hidden;
     scroll-behavior: smooth;
@@ -35,10 +35,6 @@ hr {
 
 .page {
     /* min-height: 100vh; */
-}
-
-#header {
-    transition: .5s;
 }
 
 .nav-scroll {
@@ -60,7 +56,7 @@ hr {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1;
+    z-index: 1;
     background-color: #FC4100;
     transform: translateY(100%);
     transition: .5s;
@@ -92,6 +88,7 @@ hr {
     color: rgb(201, 201, 201);
     font-size: 1.1rem;
     font-weight: 400;
+    z-index: 2;
 }
 
 .nav-link:hover {
@@ -133,6 +130,7 @@ hr {
     position: relative;
     color: #FC4100;
     font-weight: 500;
+    font-size: 3rem;
     width: max-content;
     letter-spacing: .1em;
 }
@@ -144,30 +142,19 @@ hr {
     left: 0;
     width: 100%;
     height: 100%;
-    /* background-color: #0C0C0C; */
-    background-image: repeating-linear-gradient(90deg, hsla(57,0%,42%,0.09) 0px, hsla(57,0%,42%,0.09) 1px,transparent 1px, transparent 60px),repeating-linear-gradient(0deg, hsla(57,0%,42%,0.09) 0px, hsla(57,0%,42%,0.09) 1px,transparent 1px, transparent 60px),repeating-linear-gradient(0deg, hsla(57,0%,42%,0.09) 0px, hsla(57,0%,42%,0.09) 1px,transparent 1px, transparent 10px),repeating-linear-gradient(90deg, hsla(57,0%,42%,0.09) 0px, hsla(57,0%,42%,0.09) 1px,transparent 1px, transparent 10px),linear-gradient(90deg, rgb(20,20,20),rgb(20,20,20));
+    background-color: #0C0C0C;
+    /* background-image: repeating-linear-gradient(90deg, hsla(57,0%,42%,0.09) 0px, hsla(57,0%,42%,0.09) 1px,transparent 1px, transparent 60px),repeating-linear-gradient(0deg, hsla(57,0%,42%,0.09) 0px, hsla(57,0%,42%,0.09) 1px,transparent 1px, transparent 60px),repeating-linear-gradient(0deg, hsla(57,0%,42%,0.09) 0px, hsla(57,0%,42%,0.09) 1px,transparent 1px, transparent 10px),repeating-linear-gradient(90deg, hsla(57,0%,42%,0.09) 0px, hsla(57,0%,42%,0.09) 1px,transparent 1px, transparent 10px),linear-gradient(90deg, rgb(20,20,20),rgb(20,20,20)); */
     border-left: 5px solid #FC4100;
     animation: reveal 20s linear infinite;
 }
 
 .lead {
-    color: rgb(201, 201, 201);
-    transition: color .3s ease, .5s ease-in-out;
-}
-
-.lead:hover {
     color: rgb(227, 227, 227);
 }
 
 .hero .lead {
     margin: 7% 0 9%;
-    transform: translateY(100%);
-    opacity: 0;
-}
-
-#home.show-animate .hero .lead {
-    opacity: 1;
-    transform: translateY(0);
+   
 }
 
 .hero .resume-btn {
@@ -248,6 +235,11 @@ hr {
 .page-header {
     color: #FC4100;
     font-weight: 700;
+    font-size: 2.2rem;
+}
+
+.sub-header {
+    font-size: 1.75rem;
 }
 
 
@@ -266,7 +258,7 @@ hr {
 
 .skills-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     margin-top: 7%;
 }
 
@@ -275,57 +267,33 @@ hr {
     flex-direction: column;
     align-items: center;
     height: 15rem;
-    width: 30%;
+    width: 15%;
     background-color: transparent;
     backdrop-filter: blur(55px);
     -webkit-backdrop-filter: blur(55px);
-    border: 2px solid rgb(201, 201, 201);
+    border: 2px solid #FC4100;
     border-radius: 20px;
     padding: 4% 0 1%;
     color: #FC4100;
-    transform: translateY(180%);
-    transition: border-color .5s, .5s ease-in-out;
 }
 
-.skill-box:nth-child(2) {
-    transition: transform .5s .1s ease-in-out;
-}
-
-.skill-box:nth-child(3) {
-    transition: transform .5s .2s ease-in-out;
-}
-
-.skill-box:nth-child(4) {
-    transition: transform .5s .3s ease-in-out;
-}
-
-.skill-box:nth-child(5) {
-    transition: transform .5s .4s ease-in-out;
-}
-
-.skill-box:nth-child(6) {
-    transition: transform .5s .5s ease-in-out;
-}
-
-#skills.show-animate .skill-box:hover {
+.skill-box:hover {
     border-color: #FC4100;
-    transform: scale(1.05);
-}
-
-#skills.show-animate .skill-box {
-    transform: translateY(0);
 }
 
 .skill-img {
     width: 50%;
     height: 50%;
     margin-bottom: 20%;
-    filter: grayscale(85%);
     transition: .5s;
 }
 
 .skill-box:hover .skill-img {
     filter: grayscale(0);
+}
+
+.skill-name {
+    font-size: 1.5rem;
 }
 
 .about-page {
@@ -339,13 +307,8 @@ hr {
     border-radius: 50%;
     border: 3px solid rgb(201, 201, 201);
     filter: grayscale(50%);
-    opacity: 0;
     cursor: pointer;
     transition: .5s;
-}
-
-#about.show-animate .about-img {
-    opacity: 1;
 }
 
 .about-img:hover {
@@ -357,6 +320,7 @@ hr {
 
 .about-page .lead {
     margin: 1% 0 4%;
+    width: 75%;
 }
 
 .about-page .resume-btn {
@@ -375,6 +339,7 @@ hr {
 }
 
 .form-header {
+    font-size: 2.5rem;
     color: rgb(227, 227, 227);
 }
 
@@ -511,8 +476,42 @@ hr {
 }
 
 @media only screen and (max-width: 600px){
-	.header-div {
-        display: none;
+	.skills-page .lead, .about-page .lead {
+        width: 90%;
+    }
+
+    .hero {
+        padding-right: 0;
+    }
+
+    .hero .lead {
+        text-align: center;
+    }
+
+    .hero .resume-btn, .about-page .resume-btn, .contactForm .resume-btn {
+        width: 50%;
+    }
+
+    .hero-socials-container {
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    .skills-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        place-items: center;
+    }
+
+    .skill-box {
+        width: 90%;
+        height: 10rem;
+        padding-top: 10%;
+        margin-top: 10%;
+    }
+
+    .skill-name {
+        font-size: 1.2rem;
     }
 }
 

@@ -8,16 +8,16 @@ function Hero() {
             <img className="hero-img" alt="" src={cube}/>
         </div>
         <div className="hero col-lg-6">
-          <h1 class="hero-header display-5 lh-1 mb-3">HI, I'M FOLA.</h1>
-          <p class="lead">A passionate and dedicated web developer from Lagos, Nigeria with a proven track record in creating dynamic and user-friendly websites.</p>
-          <div className="d-flex align-items-center">
-            <button type="button" class="resume-btn btn btn-lg me-5">
+          <h1 class="hero-header display-5 lh-1 mb-3 mt-4 mt-lg-0 text-center">HI, I'M FOLA.</h1>
+          <p class="lead" data-aos="fade-up">A passionate and dedicated web developer from Lagos, Nigeria with a proven track record in creating dynamic and user-friendly websites.</p>
+          <div className="d-flex align-items-center row">
+            <button type="button" class="resume-btn btn btn-lg me-lg-5 col-md-6 mx-auto mx-lg-0">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-file-earmark-text-fill me-1 mb-1" viewBox="0 0 16 16">
                 <path d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L10 .293A1 1 0 0 0 9.293 0M9.5 3.5v-2l3 3h-2a1 1 0 0 1-1-1M4.5 9a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1zM4 10.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 1 0-1h4a.5.5 0 0 1 0 1z"/>
               </svg>
-              My Resume
+              <span>My Resume</span>
             </button>
-            <div className="hero-socials-container">
+            <div className="hero-socials-container col-md-6 mt-4 mt-lg-0">
               <a className="hero-socials" id="hero-socials" href="/">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
                 <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
