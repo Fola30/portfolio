@@ -8,15 +8,19 @@ function Hero() {
             <img className="hero-img" alt="" src={cube}/>
         </div>
         <div className="hero col-lg-6">
-          <h1 class="hero-header display-5 lh-1 mb-3 mt-4 mt-lg-0 text-center">HI, I'M FOLA.</h1>
+          <div className="header-container">
+            <h1 class="hero-header display-5 lh-1 mb-3 mt-4 mt-lg-0">HI, I'M FOLA.</h1>
+          </div>
           <p class="lead" data-aos="fade-up">A passionate and dedicated web developer from Lagos, Nigeria with a proven track record in creating dynamic and user-friendly websites.</p>
           <div className="d-flex align-items-center row">
-            <button type="button" class="resume-btn btn btn-lg me-lg-5 col-md-6 mx-auto mx-lg-0">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-file-earmark-text-fill me-1 mb-1" viewBox="0 0 16 16">
-                <path d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L10 .293A1 1 0 0 0 9.293 0M9.5 3.5v-2l3 3h-2a1 1 0 0 1-1-1M4.5 9a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1zM4 10.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 1 0-1h4a.5.5 0 0 1 0 1z"/>
-              </svg>
-              <span>My Resume</span>
-            </button>
+            <div className="hero-resume-container col-md-6 mx-lg-0">
+              <button type="button" class="resume-btn btn btn-lg">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-file-earmark-text-fill me-1 mb-1" viewBox="0 0 16 16">
+                  <path d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L10 .293A1 1 0 0 0 9.293 0M9.5 3.5v-2l3 3h-2a1 1 0 0 1-1-1M4.5 9a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1zM4 10.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 1 0-1h4a.5.5 0 0 1 0 1z"/>
+                </svg>
+                <span>My Resume</span>
+              </button>
+            </div>
             <div className="hero-socials-container col-md-6 mt-4 mt-lg-0">
               <a className="hero-socials" id="hero-socials" href="/">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
