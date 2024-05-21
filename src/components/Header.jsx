@@ -4,8 +4,13 @@ import { Link } from 'react-scroll';
 function Nav(props) {
   return (
     <div class="header-div pt-4 pb-2">
-      <header id={props.name} class="d-flex justify-content-between align-items-center">
+      <header id="header" class="d-flex justify-content-between align-items-center">
         <Time />
+        <div className="hamburger" id="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
         <ul class="nav">
             <li class="nav-item mx-lg-4">
               <Link to="home" smooth={true} duration={500} className="nav-link">Home</Link>
@@ -28,7 +33,6 @@ function Nav(props) {
               <Link to="contact" smooth={true} duration={500} className="nav-link">Contact Me</Link>
             </li>
         </ul>
-        <div></div>
       </header>
   </div>
   );

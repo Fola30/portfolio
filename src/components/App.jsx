@@ -10,7 +10,8 @@ function App() {
   useEffect(() => {
     Aos.init();
     let sections = document.querySelectorAll('section');
-    let nav = document.querySelector('#header');
+    let header = document.querySelector('#header');
+    let hamburger = document.querySelector('#hamburger');
 
     window.onload = () => {
       sections.forEach((sec) => {
@@ -21,12 +22,21 @@ function App() {
     window.onscroll = () => {
       let scrollDistance = window.scrollY;
       if (scrollDistance > 37) {
-        nav.classList.add('fixed-top', 'container', 'nav-scroll');
+        header.classList.add('fixed-top', 'container', 'nav-scroll');
       }
       else if (scrollDistance === 0) {
-        nav.classList.remove('fixed-top', 'container', 'nav-scroll');
+        header.classList.remove('fixed-top', 'container', 'nav-scroll');
       }
     }
+
+    hamburger.addEventListener('click', () => {
+      if (!header.classList.contains('isOpen')) {
+        header.classList.add('isOpen');
+      } else {
+        header.classList.remove('isOpen');
+      }
+      // header.classList.add('isOpen');
+    });
   }, []);
 
   return (

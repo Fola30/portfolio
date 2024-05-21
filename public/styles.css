@@ -41,6 +41,10 @@ hr {
     backdrop-filter: blur(10px);
 }
 
+.hamburger {
+    display: none;
+}
+
 .nav-item {
     position: relative;
     overflow: hidden;
@@ -475,6 +479,68 @@ hr {
 }
 
 @media only screen and (max-width: 600px){
+    .time {
+        font-size: 1.7rem;
+    }
+
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 45px;
+        z-index: 11;
+        overflow: hidden;
+    }
+
+    .hamburger div {
+        height: 4px;
+        width: 45px;
+        background-color: #FC4100;
+        transition: .5s ease-in-out;
+    }
+
+    .nav {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        z-index: 10;
+        backdrop-filter: blur(50px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 12%;
+        height: 100%;
+        transform: translateX(100%);
+        transition: .5s ease-in-out;
+    }
+
+    .nav-link {
+        font-size: 1.3rem;
+    }
+
+    #header.isOpen .nav {
+        transform: translateX(0);
+    }
+
+    #header.isOpen .hamburger div:first-child {
+        transform-origin: left;
+        transform: rotate(42deg);
+        transition-delay: .5s;
+    }
+
+    #header.isOpen .hamburger div:nth-child(2) {
+        transform: translateX(100%)
+    }
+
+    #header.isOpen .hamburger div:last-child {
+        transform-origin: left;
+        transform: rotate(-42deg);
+        transition-delay: .5s;
+    }
+
 	.skills-page .lead, .about-page .lead {
         width: 90%;
     }
